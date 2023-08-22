@@ -35,7 +35,9 @@ Public Class SE_DraftTools
     Private Function Connect() As Boolean
 
         Try
-            objApp = GetObject(, "SolidEdge.Application")
+            OleMessageFilter.Register()
+            objApp = Marshal.GetActiveObject("SolidEdge.Application")
+
         Catch ex As Exception
             MsgBox("Solid Edge must be running", MsgBoxStyle.Critical)
             Return False
@@ -51,6 +53,20 @@ Public Class SE_DraftTools
         Return True
 
     End Function
+
+    Private Sub CloseIt()
+
+        Try
+            If Not (objApp Is Nothing) Then
+                Marshal.FinalReleaseComObject(objApp)
+            End If
+        Catch ex As Exception
+            objApp = Nothing
+        End Try
+
+        OleMessageFilter.Revoke()
+
+    End Sub
 
     Private Sub BT_FlipTerminators_Click(sender As Object, e As EventArgs) Handles BT_FlipTerminators.Click
 

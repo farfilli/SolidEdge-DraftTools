@@ -145,14 +145,12 @@ Partial Class SE_DraftTools
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(308, 38)
         Me.Controls.Add(Me.TS_DraftTools)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "SE_DraftTools"
-        Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Draft Tools v0.1"
+        Me.Text = "Draft Tools v0.2"
         Me.TopMost = True
         Me.TS_DraftTools.ResumeLayout(False)
         Me.TS_DraftTools.PerformLayout()

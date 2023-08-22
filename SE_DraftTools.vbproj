@@ -63,7 +63,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8_super_mario.ico</ApplicationIcon>
+    <ApplicationIcon>icons8_toolbox.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -94,6 +94,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OleMessageFilter.vb" />
     <Compile Include="SE_DraftTools.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -181,7 +182,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icons8_super_mario.ico" />
+    <Content Include="icons8_toolbox.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
