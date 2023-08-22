@@ -16,7 +16,7 @@ Public Class SE_DraftTools
 
     End Sub
 
-    Private Sub Attiva(sender As Object, e As EventArgs) ' Handles BT_FlipTerminators.MouseEnter, BT_ToggleTerminators.MouseEnter, BT_Close.MouseEnter, BT_AddBreak.MouseEnter, BT_RemoveBreaks.MouseEnter
+    Private Sub Attiva(sender As Object, e As EventArgs)
 
         Me.Activate()
 
@@ -124,10 +124,6 @@ Public Class SE_DraftTools
 
     End Sub
 
-    Private Sub BT_Close_Click(sender As Object, e As EventArgs) Handles BT_Close.Click
-        Me.Close()
-    End Sub
-
     Private Sub BT_AddBreak_Click(sender As Object, e As EventArgs) Handles BT_AddBreak.Click
 
         If Connect() Then
@@ -196,6 +192,68 @@ Public Class SE_DraftTools
 
             Next
 
+        End If
+
+    End Sub
+
+    Private Sub BT_HCenterDV_Click(sender As Object, e As EventArgs) Handles BT_HCenterDV.Click
+
+        If Connect() Then
+
+            For Each Item In objDft.SelectSet
+
+                Try
+
+                    SetCenter(Item, objDft.ActiveSheet.SheetSetup.SheetWidth / 2, 0)
+
+                Catch ex As Exception
+
+                End Try
+
+            Next
+
+        End If
+
+    End Sub
+
+    Private Sub BT_VCenterDV_Click(sender As Object, e As EventArgs) Handles BT_VCenterDV.Click
+
+        If Connect() Then
+
+            For Each Item In objDft.SelectSet
+
+                Try
+
+                    SetCenter(Item, 0, objDft.ActiveSheet.SheetSetup.SheetHeight / 2)
+
+                Catch ex As Exception
+
+                End Try
+
+            Next
+
+        End If
+
+    End Sub
+
+    Private Sub SetCenter(objView As SolidEdgeDraft.DrawingView, X As Double, Y As Double)
+
+        Dim min_x As Double
+        Dim min_y As Double
+        Dim max_x As Double
+        Dim max_y As Double
+        Dim Origin_X As Double
+        Dim Origin_Y As Double
+
+        objView.Range(min_x, min_y, max_x, max_y)
+        objView.GetOrigin(Origin_X, Origin_Y)
+
+        If X = 0 Then
+            objView.SetOrigin(Origin_X, Y + Origin_Y - (min_y + max_y) / 2)
+        End If
+
+        If Y = 0 Then
+            objView.SetOrigin(X + Origin_X - (min_x + max_x) / 2, Origin_Y)
         End If
 
     End Sub

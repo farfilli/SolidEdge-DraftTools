@@ -33,7 +33,8 @@ Partial Class SE_DraftTools
         Me.BT_AddBreak = New System.Windows.Forms.ToolStripButton()
         Me.BT_RemoveBreaks = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BT_Close = New System.Windows.Forms.ToolStripButton()
+        Me.BT_HCenterDV = New System.Windows.Forms.ToolStripButton()
+        Me.BT_VCenterDV = New System.Windows.Forms.ToolStripButton()
         Me.TS_DraftTools.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,11 +42,11 @@ Partial Class SE_DraftTools
         '
         Me.TS_DraftTools.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.TS_DraftTools.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_Close})
+        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_HCenterDV, Me.BT_VCenterDV})
         Me.TS_DraftTools.Location = New System.Drawing.Point(0, 0)
         Me.TS_DraftTools.Name = "TS_DraftTools"
         Me.TS_DraftTools.Padding = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.TS_DraftTools.Size = New System.Drawing.Size(272, 39)
+        Me.TS_DraftTools.Size = New System.Drawing.Size(308, 39)
         Me.TS_DraftTools.TabIndex = 0
         Me.TS_DraftTools.Text = "TS_DraftTools"
         '
@@ -120,22 +121,29 @@ Partial Class SE_DraftTools
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
         '
-        'BT_Close
+        'BT_HCenterDV
         '
-        Me.BT_Close.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BT_Close.Image = CType(resources.GetObject("BT_Close.Image"), System.Drawing.Image)
-        Me.BT_Close.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_Close.Name = "BT_Close"
-        Me.BT_Close.Size = New System.Drawing.Size(36, 36)
-        Me.BT_Close.Text = "Close"
-        Me.BT_Close.ToolTipText = "Close"
+        Me.BT_HCenterDV.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_HCenterDV.Image = CType(resources.GetObject("BT_HCenterDV.Image"), System.Drawing.Image)
+        Me.BT_HCenterDV.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_HCenterDV.Name = "BT_HCenterDV"
+        Me.BT_HCenterDV.Size = New System.Drawing.Size(36, 36)
+        Me.BT_HCenterDV.Text = "Horizontally center DV"
+        '
+        'BT_VCenterDV
+        '
+        Me.BT_VCenterDV.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_VCenterDV.Image = CType(resources.GetObject("BT_VCenterDV.Image"), System.Drawing.Image)
+        Me.BT_VCenterDV.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_VCenterDV.Name = "BT_VCenterDV"
+        Me.BT_VCenterDV.Size = New System.Drawing.Size(36, 36)
+        Me.BT_VCenterDV.Text = "Vertically center DV"
         '
         'SE_DraftTools
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(272, 38)
-        Me.ControlBox = False
+        Me.ClientSize = New System.Drawing.Size(308, 38)
         Me.Controls.Add(Me.TS_DraftTools)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -156,7 +164,6 @@ Partial Class SE_DraftTools
     Friend WithEvents TS_DraftTools As ToolStrip
     Friend WithEvents BT_FlipTerminators As ToolStripButton
     Friend WithEvents BT_ToggleTerminators As ToolStripButton
-    Friend WithEvents BT_Close As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents BT_AddBreak As ToolStripButton
     Friend WithEvents BT_RemoveBreaks As ToolStripButton
@@ -164,4 +171,6 @@ Partial Class SE_DraftTools
     Friend WithEvents BT_SelectHorizontalDims As ToolStripButton
     Friend WithEvents BT_SelectVerticalDims As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents BT_HCenterDV As ToolStripButton
+    Friend WithEvents BT_VCenterDV As ToolStripButton
 End Class
