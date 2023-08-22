@@ -13,7 +13,6 @@ From left to right:
 - Remove projection line breaks
 - Center views horizontally
 - Center views vertically
-- Close
 
 Tools work on currently selected objects, you can change selection and use the tools as many times as you want
 DraftTools can be left open and used as needed
