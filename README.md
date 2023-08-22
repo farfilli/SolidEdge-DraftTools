@@ -5,6 +5,8 @@ Solid Edge utility to change multiple draft object's characteristics at the same
 
 From left to right:
 
+- Select all horizontal dimensions
+- Select all vertical dimensions
 - Flip terminators
 - Toggle terminators
 - Add projection line breaks
@@ -14,4 +16,4 @@ From left to right:
 Tools work on currently selected objects, you can change selection and use the tools as many times as you want
 DraftTools can be left open and used as needed
 
-Current preview in this link: https://github.com/farfilli/SolidEdge-DraftTools/releases/tag/Preview
+The latest release in this link: https://github.com/farfilli/SolidEdge-DraftTools/releases/tag/Release
