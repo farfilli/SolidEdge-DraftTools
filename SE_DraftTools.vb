@@ -6,7 +6,17 @@ Public Class SE_DraftTools
     Dim objDft As SolidEdgeDraft.DraftDocument
     Dim objSty As SolidEdgeFrameworkSupport.DimStyle
 
-    Private Sub Attiva(sender As Object, e As EventArgs) Handles BT_FlipTerminators.MouseEnter, BT_ToggleTerminators.MouseEnter, BT_Close.MouseEnter, BT_AddBreak.MouseEnter, BT_RemoveBreaks.MouseEnter
+    Private Sub SE_DraftTools_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        For Each item As ToolStripItem In TS_DraftTools.Items
+
+            AddHandler item.MouseEnter, New System.EventHandler(AddressOf Attiva)
+
+        Next
+
+    End Sub
+
+    Private Sub Attiva(sender As Object, e As EventArgs) ' Handles BT_FlipTerminators.MouseEnter, BT_ToggleTerminators.MouseEnter, BT_Close.MouseEnter, BT_AddBreak.MouseEnter, BT_RemoveBreaks.MouseEnter
 
         Me.Activate()
 
@@ -149,6 +159,42 @@ Public Class SE_DraftTools
                 End Try
 
             Next Item
+
+        End If
+
+    End Sub
+
+    Private Sub BT_SelectHorizontalDims_Click(sender As Object, e As EventArgs) Handles BT_SelectHorizontalDims.Click
+
+        If Connect() Then
+
+            For Each Item In objDft.ActiveSheet.Dimensions
+
+                Try
+                    If Not Item.MeasurementAxisDirection Then objApp.ActiveSelectSet.Add(Item)
+                Catch ex As Exception
+
+                End Try
+
+            Next
+
+        End If
+
+    End Sub
+
+    Private Sub BT_SelectVerticalDims_Click(sender As Object, e As EventArgs) Handles BT_SelectVerticalDims.Click
+
+        If Connect() Then
+
+            For Each Item In objDft.ActiveSheet.Dimensions
+
+                Try
+                    If Item.MeasurementAxisDirection Then objApp.ActiveSelectSet.Add(Item)
+                Catch ex As Exception
+
+                End Try
+
+            Next
 
         End If
 

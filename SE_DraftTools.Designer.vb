@@ -24,13 +24,16 @@ Partial Class SE_DraftTools
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SE_DraftTools))
         Me.TS_DraftTools = New System.Windows.Forms.ToolStrip()
+        Me.BT_SelectHorizontalDims = New System.Windows.Forms.ToolStripButton()
+        Me.BT_SelectVerticalDims = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_FlipTerminators = New System.Windows.Forms.ToolStripButton()
         Me.BT_ToggleTerminators = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_AddBreak = New System.Windows.Forms.ToolStripButton()
         Me.BT_RemoveBreaks = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_Close = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TS_DraftTools.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -38,12 +41,36 @@ Partial Class SE_DraftTools
         '
         Me.TS_DraftTools.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.TS_DraftTools.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_Close})
+        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_Close})
         Me.TS_DraftTools.Location = New System.Drawing.Point(0, 0)
         Me.TS_DraftTools.Name = "TS_DraftTools"
-        Me.TS_DraftTools.Size = New System.Drawing.Size(194, 39)
+        Me.TS_DraftTools.Padding = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.TS_DraftTools.Size = New System.Drawing.Size(272, 39)
         Me.TS_DraftTools.TabIndex = 0
         Me.TS_DraftTools.Text = "TS_DraftTools"
+        '
+        'BT_SelectHorizontalDims
+        '
+        Me.BT_SelectHorizontalDims.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_SelectHorizontalDims.Image = CType(resources.GetObject("BT_SelectHorizontalDims.Image"), System.Drawing.Image)
+        Me.BT_SelectHorizontalDims.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_SelectHorizontalDims.Name = "BT_SelectHorizontalDims"
+        Me.BT_SelectHorizontalDims.Size = New System.Drawing.Size(36, 36)
+        Me.BT_SelectHorizontalDims.Text = "Select horizontal dimensions"
+        '
+        'BT_SelectVerticalDims
+        '
+        Me.BT_SelectVerticalDims.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_SelectVerticalDims.Image = CType(resources.GetObject("BT_SelectVerticalDims.Image"), System.Drawing.Image)
+        Me.BT_SelectVerticalDims.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_SelectVerticalDims.Name = "BT_SelectVerticalDims"
+        Me.BT_SelectVerticalDims.Size = New System.Drawing.Size(36, 36)
+        Me.BT_SelectVerticalDims.Text = "Select vertical dimensions"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
         '
         'BT_FlipTerminators
         '
@@ -64,6 +91,11 @@ Partial Class SE_DraftTools
         Me.BT_ToggleTerminators.Name = "BT_ToggleTerminators"
         Me.BT_ToggleTerminators.Size = New System.Drawing.Size(36, 36)
         Me.BT_ToggleTerminators.Text = "Toggle Terminators"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
         '
         'BT_AddBreak
         '
@@ -98,16 +130,11 @@ Partial Class SE_DraftTools
         Me.BT_Close.Text = "Close"
         Me.BT_Close.ToolTipText = "Close"
         '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
-        '
         'SE_DraftTools
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(194, 38)
+        Me.ClientSize = New System.Drawing.Size(272, 38)
         Me.ControlBox = False
         Me.Controls.Add(Me.TS_DraftTools)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -117,7 +144,7 @@ Partial Class SE_DraftTools
         Me.Name = "SE_DraftTools"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Draft Tools v0.0"
+        Me.Text = "Draft Tools v0.1"
         Me.TopMost = True
         Me.TS_DraftTools.ResumeLayout(False)
         Me.TS_DraftTools.PerformLayout()
@@ -134,4 +161,7 @@ Partial Class SE_DraftTools
     Friend WithEvents BT_AddBreak As ToolStripButton
     Friend WithEvents BT_RemoveBreaks As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents BT_SelectHorizontalDims As ToolStripButton
+    Friend WithEvents BT_SelectVerticalDims As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
 End Class
