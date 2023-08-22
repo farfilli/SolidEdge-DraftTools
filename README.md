@@ -17,4 +17,4 @@ From left to right:
 Tools work on currently selected objects, you can change selection and use the tools as many times as you want
 DraftTools can be left open and used as needed
 
-The latest release in this link: https://github.com/farfilli/SolidEdge-DraftTools/releases/tag/Release
+The latest release in this link: https://github.com/farfilli/SolidEdge-DraftTools/releases
