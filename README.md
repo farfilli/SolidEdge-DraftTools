@@ -11,6 +11,8 @@ From left to right:
 - Toggle terminators
 - Add projection line breaks
 - Remove projection line breaks
+- Center views horizontally
+- Center views vertically
 - Close
 
 Tools work on currently selected objects, you can change selection and use the tools as many times as you want
