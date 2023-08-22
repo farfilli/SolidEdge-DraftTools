@@ -48,15 +48,21 @@ Public Class SE_DraftTools
 
             For Each Item In objDft.SelectSet
 
-                If Item.TerminatorPosition Then
+                Try
 
-                    Item.TerminatorPosition = False
+                    If Item.TerminatorPosition Then
 
-                Else
+                        Item.TerminatorPosition = False
 
-                    Item.TerminatorPosition = True
+                    Else
 
-                End If
+                        Item.TerminatorPosition = True
+
+                    End If
+
+                Catch ex As Exception
+
+                End Try
 
             Next Item
 
@@ -70,31 +76,37 @@ Public Class SE_DraftTools
 
             For Each Item In objDft.SelectSet
 
-                objSty = Item.Style
+                Try
 
-                Select Case objSty.OriginTerminatorType
+                    objSty = Item.Style
 
-                    Case Is = DimTermTypeConstants.igDimStyleTermFilled
+                    Select Case objSty.OriginTerminatorType
 
-                        If objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled Then
-                            objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermDot
-                            objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermFilled
-                        Else
-                            objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled
-                            objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermDot
-                        End If
+                        Case Is = DimTermTypeConstants.igDimStyleTermFilled
 
-                    Case Is = DimTermTypeConstants.igDimStyleTermDot
+                            If objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled Then
+                                objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermDot
+                                objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermFilled
+                            Else
+                                objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled
+                                objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermDot
+                            End If
 
-                        If objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled Then
-                            objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermDot
-                            objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermDot
-                        Else
-                            objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled
-                            objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermFilled
-                        End If
+                        Case Is = DimTermTypeConstants.igDimStyleTermDot
 
-                End Select
+                            If objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled Then
+                                objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermDot
+                                objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermDot
+                            Else
+                                objSty.TerminatorType = DimTermTypeConstants.igDimStyleTermFilled
+                                objSty.OriginTerminatorType = DimTermTypeConstants.igDimStyleTermFilled
+                            End If
+
+                    End Select
+
+                Catch ex As Exception
+
+                End Try
 
             Next Item
 
