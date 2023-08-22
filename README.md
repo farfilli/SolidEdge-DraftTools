@@ -5,6 +5,8 @@ Solid Edge utility to change multiple draft object's characteristics at the same
 
 From left to right:
 
+- Select all horizontal dimensions
+- Select all vertical dimensions
 - Flip terminators
 - Toggle terminators
 - Add projection line breaks
