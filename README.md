@@ -7,6 +7,7 @@ From left to right:
 
 - Select all horizontal dimensions
 - Select all vertical dimensions
+- Toggle text fill background
 - Flip terminators
 - Toggle terminators
 - Add projection line breaks

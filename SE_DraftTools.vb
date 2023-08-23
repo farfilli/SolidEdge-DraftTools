@@ -4,7 +4,6 @@ Public Class SE_DraftTools
 
     Dim objApp As SolidEdgeFramework.Application
     Dim objDft As SolidEdgeDraft.DraftDocument
-    Dim objSty As SolidEdgeFrameworkSupport.DimStyle
 
     Private Sub SE_DraftTools_Load(sender As Object, e As EventArgs) Handles Me.Load
 
@@ -99,6 +98,8 @@ Public Class SE_DraftTools
     Private Sub BT_ToggleTerminators_Click(sender As Object, e As EventArgs) Handles BT_ToggleTerminators.Click
 
         If Connect() Then
+
+            Dim objSty As SolidEdgeFrameworkSupport.DimStyle
 
             For Each Item In objDft.SelectSet
 
@@ -270,6 +271,28 @@ Public Class SE_DraftTools
 
         If Y = 0 Then
             objView.SetOrigin(X + Origin_X - (min_x + max_x) / 2, Origin_Y)
+        End If
+
+    End Sub
+
+    Private Sub BT_SolidBackground_Click(sender As Object, e As EventArgs) Handles BT_SolidBackground.Click
+
+        If Connect() Then
+
+            Dim objSty As SolidEdgeFrameworkSupport.DimStyle
+
+            For Each Item In objDft.SelectSet
+
+                Try
+
+                    objSty = Item.Style
+                    objSty.TextAutoFillBackground = Not objSty.TextAutoFillBackground
+
+                Catch ex As Exception
+                End Try
+
+            Next Item
+
         End If
 
     End Sub

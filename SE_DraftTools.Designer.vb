@@ -27,6 +27,8 @@ Partial Class SE_DraftTools
         Me.BT_SelectHorizontalDims = New System.Windows.Forms.ToolStripButton()
         Me.BT_SelectVerticalDims = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BT_SolidBackground = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_FlipTerminators = New System.Windows.Forms.ToolStripButton()
         Me.BT_ToggleTerminators = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -42,11 +44,11 @@ Partial Class SE_DraftTools
         '
         Me.TS_DraftTools.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.TS_DraftTools.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_HCenterDV, Me.BT_VCenterDV})
+        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_SolidBackground, Me.ToolStripSeparator4, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_HCenterDV, Me.BT_VCenterDV})
         Me.TS_DraftTools.Location = New System.Drawing.Point(0, 0)
         Me.TS_DraftTools.Name = "TS_DraftTools"
         Me.TS_DraftTools.Padding = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.TS_DraftTools.Size = New System.Drawing.Size(308, 39)
+        Me.TS_DraftTools.Size = New System.Drawing.Size(350, 39)
         Me.TS_DraftTools.TabIndex = 0
         Me.TS_DraftTools.Text = "TS_DraftTools"
         '
@@ -72,6 +74,20 @@ Partial Class SE_DraftTools
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        '
+        'BT_SolidBackground
+        '
+        Me.BT_SolidBackground.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_SolidBackground.Image = CType(resources.GetObject("BT_SolidBackground.Image"), System.Drawing.Image)
+        Me.BT_SolidBackground.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_SolidBackground.Name = "BT_SolidBackground"
+        Me.BT_SolidBackground.Size = New System.Drawing.Size(36, 36)
+        Me.BT_SolidBackground.Text = "Text fill background"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
         '
         'BT_FlipTerminators
         '
@@ -143,14 +159,14 @@ Partial Class SE_DraftTools
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(308, 38)
+        Me.ClientSize = New System.Drawing.Size(350, 38)
         Me.Controls.Add(Me.TS_DraftTools)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "SE_DraftTools"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Draft Tools v0.2"
+        Me.Text = "Draft Tools v0.3"
         Me.TopMost = True
         Me.TS_DraftTools.ResumeLayout(False)
         Me.TS_DraftTools.PerformLayout()
@@ -171,4 +187,6 @@ Partial Class SE_DraftTools
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents BT_HCenterDV As ToolStripButton
     Friend WithEvents BT_VCenterDV As ToolStripButton
+    Friend WithEvents BT_SolidBackground As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
 End Class
