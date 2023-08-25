@@ -94,6 +94,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DT_Functions.vb" />
     <Compile Include="OleMessageFilter.vb" />
     <Compile Include="SE_DraftTools.vb">
       <SubType>Form</SubType>
@@ -144,15 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="SolidEdgeConstants">
-      <Guid>{C467A6F5-27ED-11D2-BE30-080036B4D502}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="SolidEdgeDraft">
       <Guid>{3E2B3BDC-F0B9-11D1-BDFD-080036B4D502}</Guid>
       <VersionMajor>1</VersionMajor>

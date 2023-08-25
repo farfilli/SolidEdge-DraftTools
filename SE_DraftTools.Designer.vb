@@ -43,12 +43,12 @@ Partial Class SE_DraftTools
         'TS_DraftTools
         '
         Me.TS_DraftTools.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.TS_DraftTools.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.TS_DraftTools.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_SolidBackground, Me.ToolStripSeparator4, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_HCenterDV, Me.BT_VCenterDV})
         Me.TS_DraftTools.Location = New System.Drawing.Point(0, 0)
         Me.TS_DraftTools.Name = "TS_DraftTools"
         Me.TS_DraftTools.Padding = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.TS_DraftTools.Size = New System.Drawing.Size(350, 39)
+        Me.TS_DraftTools.Size = New System.Drawing.Size(278, 31)
         Me.TS_DraftTools.TabIndex = 0
         Me.TS_DraftTools.Text = "TS_DraftTools"
         '
@@ -58,7 +58,7 @@ Partial Class SE_DraftTools
         Me.BT_SelectHorizontalDims.Image = CType(resources.GetObject("BT_SelectHorizontalDims.Image"), System.Drawing.Image)
         Me.BT_SelectHorizontalDims.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_SelectHorizontalDims.Name = "BT_SelectHorizontalDims"
-        Me.BT_SelectHorizontalDims.Size = New System.Drawing.Size(36, 36)
+        Me.BT_SelectHorizontalDims.Size = New System.Drawing.Size(28, 28)
         Me.BT_SelectHorizontalDims.Text = "Select horizontal dimensions"
         '
         'BT_SelectVerticalDims
@@ -67,13 +67,13 @@ Partial Class SE_DraftTools
         Me.BT_SelectVerticalDims.Image = CType(resources.GetObject("BT_SelectVerticalDims.Image"), System.Drawing.Image)
         Me.BT_SelectVerticalDims.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_SelectVerticalDims.Name = "BT_SelectVerticalDims"
-        Me.BT_SelectVerticalDims.Size = New System.Drawing.Size(36, 36)
+        Me.BT_SelectVerticalDims.Size = New System.Drawing.Size(28, 28)
         Me.BT_SelectVerticalDims.Text = "Select vertical dimensions"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
         '
         'BT_SolidBackground
         '
@@ -81,38 +81,36 @@ Partial Class SE_DraftTools
         Me.BT_SolidBackground.Image = CType(resources.GetObject("BT_SolidBackground.Image"), System.Drawing.Image)
         Me.BT_SolidBackground.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_SolidBackground.Name = "BT_SolidBackground"
-        Me.BT_SolidBackground.Size = New System.Drawing.Size(36, 36)
+        Me.BT_SolidBackground.Size = New System.Drawing.Size(28, 28)
         Me.BT_SolidBackground.Text = "Text fill background"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 31)
         '
         'BT_FlipTerminators
         '
         Me.BT_FlipTerminators.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BT_FlipTerminators.Image = CType(resources.GetObject("BT_FlipTerminators.Image"), System.Drawing.Image)
-        Me.BT_FlipTerminators.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.BT_FlipTerminators.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_FlipTerminators.Name = "BT_FlipTerminators"
-        Me.BT_FlipTerminators.Size = New System.Drawing.Size(36, 36)
+        Me.BT_FlipTerminators.Size = New System.Drawing.Size(28, 28)
         Me.BT_FlipTerminators.Text = "Flip Terminators"
         '
         'BT_ToggleTerminators
         '
         Me.BT_ToggleTerminators.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BT_ToggleTerminators.Image = CType(resources.GetObject("BT_ToggleTerminators.Image"), System.Drawing.Image)
-        Me.BT_ToggleTerminators.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.BT_ToggleTerminators.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_ToggleTerminators.Name = "BT_ToggleTerminators"
-        Me.BT_ToggleTerminators.Size = New System.Drawing.Size(36, 36)
+        Me.BT_ToggleTerminators.Size = New System.Drawing.Size(28, 28)
         Me.BT_ToggleTerminators.Text = "Toggle Terminators"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
         '
         'BT_AddBreak
         '
@@ -120,7 +118,7 @@ Partial Class SE_DraftTools
         Me.BT_AddBreak.Image = CType(resources.GetObject("BT_AddBreak.Image"), System.Drawing.Image)
         Me.BT_AddBreak.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_AddBreak.Name = "BT_AddBreak"
-        Me.BT_AddBreak.Size = New System.Drawing.Size(36, 36)
+        Me.BT_AddBreak.Size = New System.Drawing.Size(28, 28)
         Me.BT_AddBreak.Text = "Add projection line breaks"
         '
         'BT_RemoveBreaks
@@ -129,13 +127,13 @@ Partial Class SE_DraftTools
         Me.BT_RemoveBreaks.Image = CType(resources.GetObject("BT_RemoveBreaks.Image"), System.Drawing.Image)
         Me.BT_RemoveBreaks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_RemoveBreaks.Name = "BT_RemoveBreaks"
-        Me.BT_RemoveBreaks.Size = New System.Drawing.Size(36, 36)
+        Me.BT_RemoveBreaks.Size = New System.Drawing.Size(28, 28)
         Me.BT_RemoveBreaks.Text = "Remove projection line breaks"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'BT_HCenterDV
         '
@@ -143,7 +141,7 @@ Partial Class SE_DraftTools
         Me.BT_HCenterDV.Image = CType(resources.GetObject("BT_HCenterDV.Image"), System.Drawing.Image)
         Me.BT_HCenterDV.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_HCenterDV.Name = "BT_HCenterDV"
-        Me.BT_HCenterDV.Size = New System.Drawing.Size(36, 36)
+        Me.BT_HCenterDV.Size = New System.Drawing.Size(28, 28)
         Me.BT_HCenterDV.Text = "Horizontally center DV"
         '
         'BT_VCenterDV
@@ -152,21 +150,21 @@ Partial Class SE_DraftTools
         Me.BT_VCenterDV.Image = CType(resources.GetObject("BT_VCenterDV.Image"), System.Drawing.Image)
         Me.BT_VCenterDV.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BT_VCenterDV.Name = "BT_VCenterDV"
-        Me.BT_VCenterDV.Size = New System.Drawing.Size(36, 36)
+        Me.BT_VCenterDV.Size = New System.Drawing.Size(28, 28)
         Me.BT_VCenterDV.Text = "Vertically center DV"
         '
         'SE_DraftTools
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(350, 38)
+        Me.ClientSize = New System.Drawing.Size(278, 30)
         Me.Controls.Add(Me.TS_DraftTools)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "SE_DraftTools"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Draft Tools v0.3"
+        Me.Text = "Draft Tools v0.4"
         Me.TopMost = True
         Me.TS_DraftTools.ResumeLayout(False)
         Me.TS_DraftTools.PerformLayout()
