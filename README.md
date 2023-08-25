@@ -1,5 +1,5 @@
 # SolidEdge-DraftTools
-Solid Edge utility to change multiple draft object's characteristics at the same time
+Solid Edge utility to change multiple draft objects' characteristics at the same time
 
 <img src="MainForm.png">
 
@@ -18,7 +18,7 @@ From left to right:
 Tools work on currently selected objects, you can change selection and use the tools as many times as you want
 DraftTools can be left open and used as needed
 
-Individual executables of each tool are provided, these allow you to add them to the Solid Edge ribbon bar, Quick bar and Radial menu
+Individual executables of each tool are provided, add them to the Solid Edge ribbon bar, Quick bar, or Radial menu if you prefer a more integrated solution
 
 <img src="RibbonBar.png">
 
