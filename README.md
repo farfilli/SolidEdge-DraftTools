@@ -18,4 +18,8 @@ From left to right:
 Tools work on currently selected objects, you can change selection and use the tools as many times as you want
 DraftTools can be left open and used as needed
 
+Individual executables of each tool are provided, these allow you to add them to the Solid Edge ribbon bar, Quick bar and Radial menu
+
+<img src="RibbonBar.png">
+
 The latest release in this link: https://github.com/farfilli/SolidEdge-DraftTools/releases
