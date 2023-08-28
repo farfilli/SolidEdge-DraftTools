@@ -116,6 +116,33 @@ Public Class DT_Functions
 
     End Sub
 
+    Shared Sub PulloutText()
+
+        If Connect() Then
+
+            For Each item In objDft.SelectSet
+
+                Try
+
+                    Dim x, y As Double
+                    item.GetTextOffsets(x, y)
+
+                    If x = 0 And y = 0 Then
+                        item.SetTextOffsets(-0.01, 0.01)
+                    Else
+                        item.SetTextOffsets(0, 0)
+                    End If
+
+                Catch ex As Exception
+
+                End Try
+
+            Next
+
+        End If
+
+    End Sub
+
     Shared Sub FlipTerminals()
 
         If Connect() Then
@@ -181,6 +208,36 @@ Public Class DT_Functions
                             End If
 
                     End Select
+
+                Catch ex As Exception
+
+                End Try
+
+            Next Item
+
+        End If
+
+        CloseIt()
+
+    End Sub
+
+    Shared Sub ToggleProjectionLines()
+
+        If Connect() Then
+
+            Dim objSty As SolidEdgeFrameworkSupport.DimStyle
+
+            For Each Item In objDft.SelectSet
+
+                Try
+
+                    objSty = Item.Style
+
+                    If objSty.ProjectionLineDisplay = 0 Then
+                        objSty.ProjectionLineDisplay = 3
+                    Else
+                        objSty.ProjectionLineDisplay -= 1
+                    End If
 
                 Catch ex As Exception
 

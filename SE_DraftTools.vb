@@ -1,5 +1,4 @@
 ﻿Imports System.Runtime.InteropServices
-Imports SolidEdgeConstants
 Public Class SE_DraftTools
 
     Dim objApp As SolidEdgeFramework.Application
@@ -85,4 +84,15 @@ Public Class SE_DraftTools
 
     End Sub
 
+    Private Sub BT_TogglePLines_Click(sender As Object, e As EventArgs) Handles BT_TogglePLines.Click
+
+        DT_Functions.ToggleProjectionLines()
+
+    End Sub
+
+    Private Sub BT_PulloutText_Click(sender As Object, e As EventArgs) Handles BT_PulloutText.Click
+
+        DT_Functions.PulloutText()
+
+    End Sub
 End Class
