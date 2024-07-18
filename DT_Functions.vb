@@ -173,6 +173,33 @@ Public Class DT_Functions
 
     End Sub
 
+    Shared Sub ConnectLines()
+        If Connect() Then
+
+            Dim objSty As SolidEdgeFrameworkSupport.DimStyle
+
+            For Each Item In objDft.SelectSet
+                Try
+                    objSty = Item.Style
+
+                    If objSty.LineConnect = True Then
+
+                        objSty.LineConnect = False
+
+                    Else
+
+                        objSty.LineConnect = True
+
+                    End If
+
+                Catch ex As Exception
+
+                End Try
+            Next Item
+        End If
+    End Sub
+
+
     Shared Sub ToggleTerminals()
 
         If Connect() Then

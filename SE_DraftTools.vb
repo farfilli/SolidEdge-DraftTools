@@ -95,4 +95,11 @@ Public Class SE_DraftTools
         DT_Functions.PulloutText()
 
     End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+
+        DT_Functions.ConnectLines()
+
+    End Sub
+
 End Class

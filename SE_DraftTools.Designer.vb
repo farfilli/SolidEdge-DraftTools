@@ -27,18 +27,19 @@ Partial Class SE_DraftTools
         Me.BT_SelectHorizontalDims = New System.Windows.Forms.ToolStripButton()
         Me.BT_SelectVerticalDims = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BT_PulloutText = New System.Windows.Forms.ToolStripButton()
         Me.BT_SolidBackground = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_FlipTerminators = New System.Windows.Forms.ToolStripButton()
         Me.BT_ToggleTerminators = New System.Windows.Forms.ToolStripButton()
+        Me.BT_TogglePLines = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_AddBreak = New System.Windows.Forms.ToolStripButton()
         Me.BT_RemoveBreaks = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_HCenterDV = New System.Windows.Forms.ToolStripButton()
         Me.BT_VCenterDV = New System.Windows.Forms.ToolStripButton()
-        Me.BT_TogglePLines = New System.Windows.Forms.ToolStripButton()
-        Me.BT_PulloutText = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.TS_DraftTools.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,11 +47,11 @@ Partial Class SE_DraftTools
         '
         Me.TS_DraftTools.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.TS_DraftTools.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_PulloutText, Me.BT_SolidBackground, Me.ToolStripSeparator4, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.BT_TogglePLines, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_HCenterDV, Me.BT_VCenterDV})
+        Me.TS_DraftTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_SelectHorizontalDims, Me.BT_SelectVerticalDims, Me.ToolStripSeparator3, Me.BT_PulloutText, Me.BT_SolidBackground, Me.ToolStripSeparator4, Me.BT_FlipTerminators, Me.BT_ToggleTerminators, Me.BT_TogglePLines, Me.ToolStripButton1, Me.ToolStripSeparator2, Me.BT_AddBreak, Me.BT_RemoveBreaks, Me.ToolStripSeparator1, Me.BT_HCenterDV, Me.BT_VCenterDV})
         Me.TS_DraftTools.Location = New System.Drawing.Point(0, 0)
         Me.TS_DraftTools.Name = "TS_DraftTools"
         Me.TS_DraftTools.Padding = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.TS_DraftTools.Size = New System.Drawing.Size(334, 31)
+        Me.TS_DraftTools.Size = New System.Drawing.Size(362, 31)
         Me.TS_DraftTools.TabIndex = 0
         Me.TS_DraftTools.Text = "TS_DraftTools"
         '
@@ -76,6 +77,15 @@ Partial Class SE_DraftTools
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
+        '
+        'BT_PulloutText
+        '
+        Me.BT_PulloutText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_PulloutText.Image = CType(resources.GetObject("BT_PulloutText.Image"), System.Drawing.Image)
+        Me.BT_PulloutText.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_PulloutText.Name = "BT_PulloutText"
+        Me.BT_PulloutText.Size = New System.Drawing.Size(28, 28)
+        Me.BT_PulloutText.Text = "Pullout text"
         '
         'BT_SolidBackground
         '
@@ -108,6 +118,15 @@ Partial Class SE_DraftTools
         Me.BT_ToggleTerminators.Name = "BT_ToggleTerminators"
         Me.BT_ToggleTerminators.Size = New System.Drawing.Size(28, 28)
         Me.BT_ToggleTerminators.Text = "Toggle Terminators"
+        '
+        'BT_TogglePLines
+        '
+        Me.BT_TogglePLines.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_TogglePLines.Image = CType(resources.GetObject("BT_TogglePLines.Image"), System.Drawing.Image)
+        Me.BT_TogglePLines.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_TogglePLines.Name = "BT_TogglePLines"
+        Me.BT_TogglePLines.Size = New System.Drawing.Size(28, 28)
+        Me.BT_TogglePLines.Text = "Toggle projection lines"
         '
         'ToolStripSeparator2
         '
@@ -155,36 +174,27 @@ Partial Class SE_DraftTools
         Me.BT_VCenterDV.Size = New System.Drawing.Size(28, 28)
         Me.BT_VCenterDV.Text = "Vertically center DV"
         '
-        'BT_TogglePLines
+        'ToolStripButton1
         '
-        Me.BT_TogglePLines.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BT_TogglePLines.Image = CType(resources.GetObject("BT_TogglePLines.Image"), System.Drawing.Image)
-        Me.BT_TogglePLines.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_TogglePLines.Name = "BT_TogglePLines"
-        Me.BT_TogglePLines.Size = New System.Drawing.Size(28, 28)
-        Me.BT_TogglePLines.Text = "Toggle projection lines"
-        '
-        'BT_PulloutText
-        '
-        Me.BT_PulloutText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BT_PulloutText.Image = CType(resources.GetObject("BT_PulloutText.Image"), System.Drawing.Image)
-        Me.BT_PulloutText.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_PulloutText.Name = "BT_PulloutText"
-        Me.BT_PulloutText.Size = New System.Drawing.Size(28, 28)
-        Me.BT_PulloutText.Text = "Pullout text"
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(28, 28)
+        Me.ToolStripButton1.Text = "Toggle connection lines"
         '
         'SE_DraftTools
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(334, 30)
+        Me.ClientSize = New System.Drawing.Size(362, 30)
         Me.Controls.Add(Me.TS_DraftTools)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "SE_DraftTools"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Draft Tools v0.5"
+        Me.Text = "Draft Tools v0.6"
         Me.TopMost = True
         Me.TS_DraftTools.ResumeLayout(False)
         Me.TS_DraftTools.PerformLayout()
@@ -209,4 +219,5 @@ Partial Class SE_DraftTools
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents BT_TogglePLines As ToolStripButton
     Friend WithEvents BT_PulloutText As ToolStripButton
+    Friend WithEvents ToolStripButton1 As ToolStripButton
 End Class
