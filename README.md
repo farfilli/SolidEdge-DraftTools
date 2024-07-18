@@ -12,6 +12,7 @@ From left to right:
 - Flip terminators
 - Toggle terminators
 - Toggle projection lines
+- Toggle connection lines
 - Add projection line breaks
 - Remove projection line breaks
 - Center views horizontally
